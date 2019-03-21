@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ball Crush</title>
+    <meta charset="utf-8">
+    <style></style>
+</head>
+<body>
+    <canvas id="canvas" width="600" height="700"></canvas>
+    <img id="orange" src="images/ball/orange.png" style="display: none" />
+    <img id="red" src="images/ball/red.png" style="display: none" />
+    <img id="blue" src="images/ball/blue.png" style="display: none" />
+    <img id="green" src="images/ball/green.png" style="display: none" />
+    <img id="grey" src="images/ball/grey.png" style="display: none" />
+    <img id="purple" src="images/ball/purple.png" style="display: none" />
+    <!-- <img id="yellow" src="images/ball/yellow.png" style="display: none" /> -->
+    
+    <script>
+        var ctx, balls = [];
+        var imageList = [orange, red, blue, green, grey, purple]
+
+        function Ball(x,y){
+            this.x1 = x;
+            this.y1 = y;
+            this.x2 = x;
+            this.y2 = y;
+        }
+
+        function initialize(){
+            //create ball objects
+            for(let x=0; x<10; x++){
+                balls[x] = [];
+                for(let y=0; y<10;y++) {
+                    balls[x][y] = new Ball(x, y);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
